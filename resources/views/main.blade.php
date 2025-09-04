@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <!-- Title and Meta Tags -->
-    <title>{{ __('site.title') }}</title>
-    <meta property="og:title" content="{{ __('site.title') }}">
-    <meta name="twitter:title" content="{{ __('site.title') }}">
-    <meta name="description" content="{{ __('site.description') }}">
+    <title>{{$setting->app_name}}</title>
+    <meta property="og:title" content="{{$setting->app_name}}">
+    <meta name="twitter:title" content="{{$setting->app_name}}">
+    <meta name="description" content="{{$setting->about_us}}">
     <meta property="og:description" content="{{ __('site.description') }}">
     <meta name="twitter:description" content="{{ __('site.description') }}">
     <meta name="keywords" content="{{ __('site.keywords') }}">
