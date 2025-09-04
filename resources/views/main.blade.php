@@ -24,7 +24,7 @@
     <meta property="og:site_name" content="{{ $setting->app_name }} Foundation">
     <meta property="og:type" content="website">
 
-    <link rel="shortcut icon" href="{{ $setting->logo }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{Storage::url($setting->logo) }}" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Tajawal:wght@400;700&display=swap"
         rel="stylesheet">
@@ -48,7 +48,7 @@
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}" id="nav-brand">
-                <img src="{{storage::url(Storage::url($setting->logo)) }}"
+                <img src="{{Storage::url($setting->logo) }}"
                     style="height:50px; background-color:#0c5e40; border-radius:10%;">
             </a>
 
