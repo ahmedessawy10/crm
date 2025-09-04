@@ -149,9 +149,9 @@
                     <ul class="footer-links">
                         <li><a href="{{ route('home')}}#aboutus">{{ __('site.about',["name"=> $setting->app_name])
                                 }}</a></li>
-                        <li><a href="{{ route('home')}}#whyus">{{ __('site.why',["name"=> $setting->app_name]) }}</a>
+                        <li><a href="{{ route('home')}}#whyus">{{ __('site.why2',["name"=> $setting->app_name]) }}</a>
                         </li>
-                        <li><a href="{{ route('home')}}#programs">{{ __('site.programs',["name"=> $setting->app_name])
+                        <li><a href="{{ route('home')}}#programs">{{ __('site.programs2',["name"=> $setting->app_name])
                                 }}</a>
                         </li>
                         {{-- <li><a href="#">{{ __('site.faq') }}</a></li> --}}

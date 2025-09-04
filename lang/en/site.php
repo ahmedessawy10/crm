@@ -29,7 +29,7 @@ return [
     'copyright'         =>
     '© 2023 :name Foundation. All rights reserved.',
     "why"               => "Why",
-    "why"               => "Why :name",
-    "programs"          => "Programs :name",
+    "why2"              => "Why :name",
+    "programs2"         => "Programs :name",
     "sponsors"          => "Sponsors",
 ];

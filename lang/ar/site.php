@@ -29,7 +29,7 @@ return [
     'copyright'         =>
     'حقوق الطبع والنشر تعود لـ":name" © 2023. كافة الحقوق محفوظة',
     "why"               => "لماذا",
-    "why"               => "لماذا :name",
-    "programs"          => "برامج :name",
+    "why2"              => "لماذا :name",
+    "programs2"         => "برامج :name",
     "sponsors"          => "الرعاة",
 ];
