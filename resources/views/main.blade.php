@@ -48,7 +48,7 @@
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}" id="nav-brand">
-                <img src="{{Storage::url($setting->logo) }}"
+                <img src="{{storage::url(Storage::url($setting->logo)) }}"
                     style="height:50px; background-color:#0c5e40; border-radius:10%;">
             </a>
 
