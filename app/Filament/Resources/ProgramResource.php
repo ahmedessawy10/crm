@@ -8,7 +8,7 @@ use App\Filament\Resources\ProgramResource\RelationManagers\GoalsRelationManager
 use App\Filament\Resources\ProgramResource\RelationManagers\ImagesRelationManager;
 use App\Models\Program;
 use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Concerns\Translatable;
@@ -43,7 +43,7 @@ class ProgramResource extends Resource
                     ->required(),
 
                 TranslatableContainer::make(
-                    RichEditor::make('description')
+                    Textarea::make('description')
                         ->required()
                         ->maxLength(255)
                 )->columnSpan(2),
@@ -57,17 +57,17 @@ class ProgramResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\ImageColumn::make('image')
-                    ->label(__("file.image"))
+                // ->label(__("file.image"))
                     ->square()
                     ->size(60),
 
                 Tables\Columns\TextColumn::make('name')
-                    ->label("file.name")
+                // ->label("file.name")
                     ->searchable()
                     ->sortable(),
 
                 Tables\Columns\TextColumn::make('description')
-                    ->label("file.description")
+                // ->label("file.description")
                     ->limit(50)
                     ->toggleable(),
             ])
