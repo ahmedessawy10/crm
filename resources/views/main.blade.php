@@ -120,9 +120,9 @@
 
     <!-- ====== Footer ====== -->
     <footer class="footer-section">
-        <div class="container">
-            <div class="row mb-4">
-                <section class="col-lg-4 mb-4 mb-lg-0 social-contact" data-aos="fade-up">
+        <div class="container ">
+            <div class="row mb-4 justify-content-center">
+                <section class="col-lg-4 mb-6 mb-lg-0 social-contact" data-aos="fade-up">
                     <div class="social-icons mb-4">
                         <a href="{{ $setting->facebook_url }}" class="social-icon"><i class="fab fa-facebook-f"></i></a>
                         <a href="{{ $setting->youtube_url }}" class="social-icon"><i class="fab fa-youtube"></i></a>
@@ -134,43 +134,40 @@
                     <p class="contact-email">{{$setting->email}}</p>
                 </section>
 
-                <section class="col-lg-2 col-md-4 mb-4 mb-lg-0 text-lg-end">
-                    <h5 class="footer-title">{{ __('site.contact_us') }}</h5>
+                <section class="col-lg-4 col-md-4 mb-4 mb-lg-0 d-flex align-items-center justify-content-center">
+                    {{-- <h5 class="footer-title">{{ __('site.contact_us') }}</h5>
                     <ul class="footer-links">
                         <li><a href="#">{{ __('site.have_question') }}</a></li>
                         <li><a href="#">{{ __('site.want_to_ask') }}</a></li>
                     </ul>
-                    <button class="btn btn-outline-light btn-sm mt-3">{{ __('site.contact_button') }}</button>
+                    <button class="btn btn-outline-light btn-sm mt-3">{{ __('site.contact_button') }}</button> --}}
+                    <img src="{{Storage::url($setting->logo) }}" style="width:120px" alt="">
                 </section>
 
-                <section class="col-lg-3 col-md-4 mb-4 mb-lg-0 text-lg-end">
-                    <h5 class="footer-title">{{ __('site.our_communities') }}</h5>
-                    <ul class="footer-links">
-                        <li><a href="#">{{ __('site.youth_council') }}</a></li>
-                        <li><a href="#">{{ __('site.saudi_leaders') }}</a></li>
-                    </ul>
-                </section>
-
-                <section class="col-lg-3 col-md-4 mb-4 mb-lg-0 text-lg-end">
+                <section class="col-lg-4 col-md-6 mb-4 mb-lg-0 text-lg">
                     <h5 class="footer-title">{{ __('site.about_us') }}</h5>
                     <ul class="footer-links">
-                        <li><a href="#">{{ __('site.about_hub') }}</a></li>
-                        <li><a href="#">{{ __('site.about_foundation') }}</a></li>
-                        <li><a href="#">{{ __('site.faq') }}</a></li>
+                        <li><a href="{{ route('home')}}#aboutus">{{ __('site.about',["name"=> $setting->app_name])
+                                }}</a></li>
+                        <li><a href="{{ route('home')}}#whyus">{{ __('site.why',["name"=> $setting->app_name]) }}</a>
+                        </li>
+                        <li><a href="{{ route('home')}}#programs">{{ __('site.programs',["name"=> $setting->app_name])
+                                }}</a>
+                        </li>
+                        {{-- <li><a href="#">{{ __('site.faq') }}</a></li> --}}
                     </ul>
                 </section>
             </div>
 
-            <div class="footer-bottom row align-items-center">
-                <div class="col-md-6 mb-2 mb-md-0 footer-policies">
+            <div class="footer-bottom row text-center">
+                {{-- <div class="col-md-6 mb-2 mb-md-0 footer-policies">
                     <a href="#" class="policy-link">{{ __('site.privacy_policy') }}</a>
                     <a href="#" class="policy-link">{{ __('site.safe_use_policy') }}</a>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <p class="copyright-text">
-                        {{ __('site.copyright') }}
-                    </p>
-                </div>
+                </div> --}}
+                <p class="copyright-text">
+                    {{ __('site.copyright',['name' => $setting->app_name]) }}
+                </p>
+
             </div>
         </div>
     </footer>

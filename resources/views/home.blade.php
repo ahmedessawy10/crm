@@ -16,8 +16,9 @@
 
         <!-- الأزرار -->
         <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1400">
-            <a href="#" id="btn-start" class="btn btn-success btn-lg me-2">{{ __('home.btn_start') }}</a>
-            <a href="#" id="btn-about" class="btn btn-outline-light btn-lg">{{ __('home.btn_about') }}</a>
+            <a href="{{ route('home') }}#programs" id="btn-start" class="btn btn-success btn-lg me-2">{{
+                __('home.btn_start') }}</a>
+            {{-- <a href="#" id="btn-about" class="btn btn-outline-light btn-lg">{{ __('home.btn_about') }}</a> --}}
         </div>
     </div>
 </header>
@@ -78,7 +79,7 @@
 </section>
 
 <!-- سكشن الكروت -->
-<section class="flip-cards-section">
+<section class="flip-cards-section" id="programs">
     <div class="container">
         <h1 class="cards-title" data-aos="fade-up" data-aos-duration="1000">
             {{ __('home.cards_title') }}
@@ -215,13 +216,13 @@
                 <h1 class="display-3 fw-bold mb-4" data-aos="fade-up" data-aos-duration="1000">
                     {{ __('home.official_sponsors') }}
                 </h1>
-
+                {{--
                 <p class="lead mb-4 fs-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                     {{ __('home.share_ideas') }}
-                </p>
+                </p> --}}
 
                 <!-- Carousel -->
-                <div id="sponsorsCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+                <div id="sponsorsCarousel" class="carousel slide my-4" style="" data-bs-ride="carousel">
                     <div class="carousel-inner">
 
                         {{-- @dd($sponsors) --}}

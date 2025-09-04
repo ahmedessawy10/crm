@@ -21,13 +21,15 @@ return [
     'youth_council'     => 'Youth Impact Council',
     'saudi_leaders'     => 'Saudi Leaders Council',
     'about_us'          => 'About Us',
-    'about_hub'         => 'About Haddaj Hub',
+    'about'             => 'About :name',
     'about_foundation'  => 'About Misk Foundation',
     'faq'               => 'FAQ',
     'privacy_policy'    => 'Privacy Policy',
     'safe_use_policy'   => 'Safe & Fair Use Policy',
     'copyright'         =>
-    '© 2023 Misk Foundation. All rights reserved.',
+    '© 2023 :name Foundation. All rights reserved.',
     "why"               => "Why",
+    "why"               => "Why :name",
+    "programs"          => "Programs :name",
     "sponsors"          => "Sponsors",
 ];

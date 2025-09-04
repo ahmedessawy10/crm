@@ -13,8 +13,7 @@ return [
     |
     */
 
-    'programes'   => 'programes
-',
+    'programes'   => 'programes',
     'password' => 'The provided password is incorrect.',
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
 
