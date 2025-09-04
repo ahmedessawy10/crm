@@ -12,11 +12,21 @@ class Program extends Model
 
     public function goals()
     {
-        return $this->hasMany(Goal::class);
+        return $this->hasMany(Goal::class, "program_id");
     }
     public function images()
     {
-        return $this->hasMany(Image::class);
+        return $this->hasMany(Image::class, "program_id");
+    }
+
+    public function dayActivity()
+    {
+        return $this->hasMany(DayActivity::class, "program_id");
+    }
+
+    public function fags()
+    {
+        return $this->hasMany(ProgramFag::class, "program_id");
     }
 
 }

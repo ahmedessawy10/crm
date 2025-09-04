@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('settings', function (Blueprint $table) {
             $table->id();
             $table->string("logo")->nullable();
-            $table->json("app_name")->nullable(); // متعدد اللغات
+            $table->json("app_name")->nullable();
             $table->string("default_language")->default("ar");
 
             $table->string("facebook_url")->nullable();
@@ -23,10 +23,12 @@ return new class extends Migration
             $table->string("instagram_url")->nullable();
             $table->string("snapchat_url")->nullable();
 
-            $table->json("about_us")->nullable(); // متعدد اللغات
+            $table->json("about_us")->nullable();
             $table->string("about_us_image")->nullable();
+            $table->string("why_us_image")->nullable();
             $table->json("address")->nullable();
             $table->string("phone")->nullable();
+            $table->string("email")->nullable();
 
             $table->timestamps();
         });

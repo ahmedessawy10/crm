@@ -6,7 +6,10 @@ use Filament\Pages;
 use Filament\Panel;
 use Filament\Widgets;
 use Filament\PanelProvider;
+use App\Filament\Widgets\StateApp;
 use Filament\Support\Colors\Color;
+use App\Filament\Widgets\TotalVisits;
+use App\Filament\Widgets\TotalCustomer;
 use Filament\Http\Middleware\Authenticate;
 use Filament\SpatieLaravelTranslatablePlugin;
 use Illuminate\Session\Middleware\StartSession;
@@ -39,8 +42,10 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
-                Widgets\AccountWidget::class,
-                Widgets\FilamentInfoWidget::class,
+                // Widgets\AccountWidget::class,
+                // Widgets\FilamentInfoWidget::class,
+                StateApp::class,
+              
             ])
             ->middleware([
                 EncryptCookies::class,
@@ -58,7 +63,7 @@ class AdminPanelProvider extends PanelProvider
             ])
             
             ->plugin(
-       SpatieLaravelTranslatablePlugin::make()->defaultLocales([ 'ar',"en"]),
+       SpatieLaravelTranslatablePlugin::make()->defaultLocales(['ar','en']),
         );
 
     }

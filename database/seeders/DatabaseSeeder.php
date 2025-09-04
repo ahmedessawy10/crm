@@ -25,6 +25,9 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             SettingSeeder::class,
+            HeroSectionSeeder::class,
+            WhyUsSeeder::class,
+            StatisticsSeeder::class,
         ]);
     }
 }

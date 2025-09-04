@@ -1,7 +1,7 @@
 <?php
 namespace App\Filament\Resources\ProgramResource\RelationManagers;
 
-use Filament\Forms\Components\RichEditor;
+use Filament\Forms;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\RelationManagers\RelationManager;
@@ -17,18 +17,12 @@ class DayActivityRelationManager extends RelationManager
     {
         return $form
             ->schema([
-
+                Forms\Components\TextInput::make('number')
+                    ->required()
+                    ->maxLength(255),
                 TranslatableContainer::make(
-                    TextInput::make('title')
-                        ->required()
-                        ->maxLength(255)
+                    TextInput::make("content")
                 ),
-
-                TranslatableContainer::make(
-                    RichEditor::make('content')
-                        ->required()
-                        ->maxLength(255)
-                )->columnSpan(2),
 
             ]);
     }
@@ -36,9 +30,10 @@ class DayActivityRelationManager extends RelationManager
     public function table(Table $table): Table
     {
         return $table
-            ->recordTitleAttribute('title')
+            ->recordTitleAttribute('number')
             ->columns([
-                Tables\Columns\TextColumn::make('title'),
+                Tables\Columns\TextColumn::make('number'),
+                Tables\Columns\TextColumn::make('content'),
             ])
             ->filters([
                 //

@@ -7,9 +7,9 @@ use Spatie\Translatable\HasTranslations;
 class DayActivity extends Model
 {
     use HasTranslations;
-    protected $fillable = ["number", 'title', "content"];
+    protected $fillable = ["number", "content"];
 
-    public $translatable = ['title', "content"];
+    public $translatable = ["content"];
 
     public function program()
     {

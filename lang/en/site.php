@@ -1,0 +1,33 @@
+<?php
+return [
+    'title'             => 'Haddaj Hub',
+    'description'       => 'A platform designed for ambitious Saudi youth...',
+    'keywords'          => 'Haddaj Hub, Misk Foundation, Youth Programs',
+
+    'toggle_navigation' => 'Toggle navigation',
+    'paths'             => 'Paths',
+    'programs'          => 'Programs',
+    'events'            => 'Events',
+    'highlights'        => 'Highlights',
+    'login'             => 'Login',
+
+    'address'           => 'P.O. Box 10076 Riyadh 11433 Saudi Arabia',
+    'email'             => 'hubsupport@misk.org.sa',
+    'contact_us'        => 'Contact Us',
+    'have_question'     => 'Have any questions?',
+    'want_to_ask'       => 'We would love to hear them!',
+    'contact_button'    => 'Get in Touch',
+    'our_communities'   => 'Our Communities',
+    'youth_council'     => 'Youth Impact Council',
+    'saudi_leaders'     => 'Saudi Leaders Council',
+    'about_us'          => 'About Us',
+    'about_hub'         => 'About Haddaj Hub',
+    'about_foundation'  => 'About Misk Foundation',
+    'faq'               => 'FAQ',
+    'privacy_policy'    => 'Privacy Policy',
+    'safe_use_policy'   => 'Safe & Fair Use Policy',
+    'copyright'         =>
+    '© 2023 Misk Foundation. All rights reserved.',
+    "why"               => "Why",
+    "sponsors"          => "Sponsors",
+];

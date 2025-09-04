@@ -1,18 +1,20 @@
 <?php
 namespace App\Filament\Resources;
 
-use Filament\Tables;
-use App\Models\Program;
-use Filament\Forms\Form;
-use Filament\Tables\Table;
-use Filament\Resources\Resource;
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\RichEditor;
-use Filament\Resources\Concerns\Translatable;
 use App\Filament\Resources\ProgramResource\Pages;
+use App\Filament\Resources\ProgramResource\RelationManagers\DayActivityRelationManager;
+use App\Filament\Resources\ProgramResource\RelationManagers\FagsRelationManager;
 use App\Filament\Resources\ProgramResource\RelationManagers\GoalsRelationManager;
 use App\Filament\Resources\ProgramResource\RelationManagers\ImagesRelationManager;
+use App\Models\Program;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Form;
+use Filament\Resources\Concerns\Translatable;
+use Filament\Resources\Resource;
+use Filament\Tables;
+use Filament\Tables\Table;
 use Mvenghaus\FilamentPluginTranslatableInline\Forms\Components\TranslatableContainer;
 
 class ProgramResource extends Resource
@@ -23,6 +25,7 @@ class ProgramResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    protected static ?string $navigationGroup = 'programs';
     public static function form(Form $form): Form
     {
         return $form
@@ -35,8 +38,8 @@ class ProgramResource extends Resource
 
                 FileUpload::make('image')
                     ->image()
-                    ->directory("public")
-                    ->visibility('public')
+                    ->disk('public')
+
                     ->required(),
 
                 TranslatableContainer::make(
@@ -90,6 +93,8 @@ class ProgramResource extends Resource
 
             GoalsRelationManager::class,
             ImagesRelationManager::class,
+            DayActivityRelationManager::class,
+            FagsRelationManager::class,
 
         ];
     }
