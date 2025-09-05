@@ -109,7 +109,7 @@
                         @endif
                         @endforeach
                     </li>
-                    <li class="nav-item"><a class="btn btn-success" href="#">{{ __('site.login') }}</a></li>
+                    {{-- <li class="nav-item"><a class="btn btn-success" href="#">{{ __('site.login') }}</a></li> --}}
                 </ul>
             </div>
         </div>

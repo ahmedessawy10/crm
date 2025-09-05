@@ -19,7 +19,7 @@ body.lang-en {
   z-index: 1000;
 }
 .navbar-nav.ms-auto .nav-item:not(:last-child) {
-  margin-right: 210px; /* المسافة بين الأزرار داخل الـ ul */
+  /* margin-right: 210px; المسافة بين الأزرار داخل الـ ul */
 }
 
 .navbar.scrolled {
