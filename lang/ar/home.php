@@ -69,7 +69,7 @@ return [
     "contact_person"         => "الشخص المسؤول",
     "send"                   => "ارسال",
     "sponsor_registration"   => "التسجيل كراعي",
-    'official_sponsors'      => 'الرعتنا',
+    'official_sponsors'      => 'رعاتنا',
     'share_ideas'            => 'هل لديك فكرة أو طريقة مبتكرة للتعلم والنمو؟ لا تتردد. شارك أفكارك معنا.',
 
     "join_us"                => "انضم الينا",
