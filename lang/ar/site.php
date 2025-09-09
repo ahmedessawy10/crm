@@ -31,5 +31,5 @@ return [
     "why"               => "لماذا",
     "why2"              => "لماذا :name",
     "programs2"         => "برامج :name",
-    "sponsors"          => "الرعاة",
+    "sponsors"          => "رعاتنا",
 ];

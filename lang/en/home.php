@@ -69,7 +69,7 @@ return [
     "send"                   => "send",
     "sponsor_registration"   => "Sponsor Registration",
 
-    'official_sponsors'      => 'Official Sponsors',
+    'official_sponsors'      => 'Our Sponsors',
     'share_ideas'            => 'Do you have an idea or a creative way to learn and grow? Don’t hesitate. Share your ideas with us.',
 
     "join_us"                => "JOIN US",
