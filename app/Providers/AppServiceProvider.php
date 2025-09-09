@@ -24,12 +24,12 @@ class AppServiceProvider extends ServiceProvider
 
         if (Schema::hasTable('settings')) {
 
-        $setting  = Setting::first();
-        $programs = Program::all();
+            $setting  = Setting::first();
+            $programs = Program::all();
 
-        view()->share("setting", $setting);
-        view()->share("programs", $programs);
+            view()->share("setting", $setting);
+            view()->share("programs", $programs);
         }
-        
+
     }
 }
