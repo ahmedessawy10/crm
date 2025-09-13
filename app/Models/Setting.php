@@ -24,7 +24,7 @@ class Setting extends Model
         'email',
     ];
 
-    public $translatable = ['app_name', 'about_us', "address"];
+    public $translatable = ['app_name', 'about_us', 'address'];
 
     protected $casts = [
         'app_name' => 'array',

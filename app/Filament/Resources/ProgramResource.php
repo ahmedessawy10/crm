@@ -8,7 +8,6 @@ use App\Filament\Resources\ProgramResource\RelationManagers\GoalsRelationManager
 use App\Filament\Resources\ProgramResource\RelationManagers\ImagesRelationManager;
 use App\Models\Program;
 use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Concerns\Translatable;
@@ -35,18 +34,15 @@ class ProgramResource extends Resource
                         ->required()
                         ->maxLength(255)
                 ),
+                TranslatableContainer::make(
+                    TextInput::make('description')
+                        ->required()
+                        ->maxLength(255)
+                ),
 
                 FileUpload::make('image')
                     ->image()
-                    ->disk('public')
-
-                    ->required(),
-
-                TranslatableContainer::make(
-                    Textarea::make('description')
-                        ->required()
-                        ->maxLength(255)
-                )->columnSpan(2),
+                    ->required()->columnSpan(2),
 
             ]);
 
