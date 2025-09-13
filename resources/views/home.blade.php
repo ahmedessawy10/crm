@@ -61,7 +61,8 @@
                         <div class="choose-us-icon"><i class="{{ $ws->icon }}"></i></div>
                         <div class="choose-us-card-content">
                             <h4>{{$ws->title }}</h4>
-                            <p>{{ $ws->content }}</p>
+                            <div>{!! $ws->content !!}
+                            </div>>
                         </div>
                     </div>
 
