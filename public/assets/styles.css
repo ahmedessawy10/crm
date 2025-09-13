@@ -195,7 +195,7 @@ border-radius: 10%;
 .main-title {
   font-size: 2rem;
   font-weight: bold;
-  color: #cde307;
+  color: #cde307 !important;
   margin-bottom: 1rem;
 }
 
