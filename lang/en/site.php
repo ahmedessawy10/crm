@@ -27,7 +27,7 @@ return [
     'privacy_policy'    => 'Privacy Policy',
     'safe_use_policy'   => 'Safe & Fair Use Policy',
     'copyright'         =>
-    '© 2023 :name Foundation. All rights reserved.',
+    '© 2025 :name Foundation. All rights reserved.',
     "why"               => "Why",
     "why2"              => "Why :name",
     "programs2"         => "Programs :name",
