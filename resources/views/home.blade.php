@@ -96,7 +96,7 @@
                         <!-- الوجه الأمامي -->
                         <div class="flip-card-front">
                             <img src="{{Storage::url($p->image)}}" class="card-img-top">
-                            {{-- <div class="card-header text-center fw-bold">{{ $p->name }}</div> --}}
+                            <div class="card-header text-center fw-bold">{{ $p->name }}</div>
                         </div>
                         <!-- الوجه الخلفي -->
                         <div class="flip-card-back">
