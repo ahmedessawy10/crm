@@ -62,7 +62,7 @@
                         <div class="choose-us-card-content">
                             <h4>{{$ws->title }}</h4>
                             <div>{!! $ws->content !!}
-                            </div>>
+                            </div>
                         </div>
                     </div>
 
