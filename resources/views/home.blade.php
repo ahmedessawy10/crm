@@ -36,9 +36,9 @@
 
             <!-- النص -->
             <div class="col-lg-6 col-md-12" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="200">
-                <h2 class="main-title mb-3">{{ __('home.about_title') }}</h2>
+                <h2 class="main-title mb-3">{!! __('home.about_title') !!}</h2>
                 <p class="about-text">
-                    {{ $setting->about_us}}
+                    {!! $setting->about_us!!}
                 </p>
             </div>
         </div>
