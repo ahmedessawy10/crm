@@ -5,7 +5,6 @@ use App\Filament\Resources\SettingResource\Pages;
 use App\Models\Setting;
 use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
@@ -35,8 +34,7 @@ class SettingResource extends Resource
 
                     Forms\Components\TextInput::make('default_language')
                         ->required()
-                        ->maxLength(255)
-                        ->default('ar'),
+                        ->maxLength(255),
                     FileUpload::make('logo')
                         ->image(),
                 ]),
@@ -55,27 +53,24 @@ class SettingResource extends Resource
                 ])
                 ,
                 Section::make("About us")->schema([
-                    TranslatableContainer::make(
-                        RichEditor::make('about_us')
-                            ->required()
-
-                    ),
+                    // TranslatableContainer::make(
+                    //     Textarea::make('about_us')
+                    //         ->required()
+                    // ),
                     Forms\Components\FileUpload::make('about_us_image')
                         ->image(),
-
                 ]),
                 Section::make("Why us")->schema([
                     Forms\Components\FileUpload::make('why_us_image')
                         ->image(),
-
                 ]),
+
                 Section::make("contact info")->schema([
-                    TranslatableContainer::make(
-                        TextInput::make('address')
-                            ->required()
-                            ->maxLength(255)
-                    ),
-                    Forms\Components\TextInput::make('phone')
+                    // TranslatableContainer::make(
+                    //     TextInput::make('address')
+                    //         ->required()
+                    // ),
+                    TextInput::make('phone')
                         ->tel()
                         ->maxLength(20),
 
