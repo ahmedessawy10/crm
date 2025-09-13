@@ -65,7 +65,7 @@
                     <li class="nav-item dropdown" data-aos="zoom-in">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            {{ __('site.programs') }}
+                            {{ __('site.tour',['name'=>$setting->app_name]) }}
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 

@@ -10,7 +10,7 @@ return [
     'events'            => 'Events',
     'highlights'        => 'Highlights',
     'login'             => 'Login',
-
+    "tour,"              => ":name Tour",
     'address'           => 'P.O. Box 10076 Riyadh 11433 Saudi Arabia',
     'email'             => 'hubsupport@misk.org.sa',
     'contact_us'        => 'Contact Us',

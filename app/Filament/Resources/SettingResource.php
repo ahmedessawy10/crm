@@ -37,10 +37,8 @@ class SettingResource extends Resource
                         ->required()
                         ->maxLength(255)
                         ->default('ar'),
-
                     FileUpload::make('logo')
-                        ->image()
-                        ->disk('public'),
+                        ->image(),
                 ]),
                 Section::make("social media")->schema([
                     Forms\Components\TextInput::make('facebook_url')

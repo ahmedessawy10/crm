@@ -7,10 +7,11 @@ return [
     'toggle_navigation' => 'تبديل القائمة',
     'paths'             => 'مسارات',
     'programs'          => 'البرامج',
+
     'events'            => 'الفعاليات',
     'highlights'        => 'الإضاءات',
     'login'             => 'تسجيل الدخول',
-
+    "tour"              => "رحلة :name",
     'address'           => 'صندوق بريد 10076 الرياض 11433 المملكة العربية السعودية',
     'email'             => 'hubsupport@misk.org.sa',
     'contact_us'        => 'تواصل معنا',
