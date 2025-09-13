@@ -61,7 +61,14 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     {{-- <li class="nav-item" data-aos="zoom-in"><a class="nav-link" href="#">{{ __('site.paths') }}</a>
                     </li> --}}
-
+                    <li class="nav-item" data-aos="zoom-in"><a class="nav-link" href="{{ route('home') }}#aboutus">
+                            {{ __('site.about_us') }}
+                        </a>
+                    </li>
+                    <li class="nav-item" data-aos="zoom-in"><a class="nav-link" href="{{ route('home') }}#whyus">
+                            {{ __('site.why') ." ". $setting->app_name}}
+                        </a>
+                    </li>
                     <li class="nav-item dropdown" data-aos="zoom-in">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -83,14 +90,8 @@
                     {{-- <li class="nav-item" data-aos="zoom-in"><a class="nav-link" href="#">{{ __('site.programs')
                             }}</a>
                     </li> --}}
-                    <li class="nav-item" data-aos="zoom-in"><a class="nav-link" href="{{ route('home') }}#aboutus">
-                            {{ __('site.about_us') }}
-                        </a>
-                    </li>
-                    <li class="nav-item" data-aos="zoom-in"><a class="nav-link" href="{{ route('home') }}#whyus">
-                            {{ __('site.why') ." ". $setting->app_name}}
-                        </a>
-                    </li>
+
+
                     <li class="nav-item" data-aos="zoom-in"><a class="nav-link" href="{{ route('home') }}#sponsors">{{
                             __('site.sponsors') }}</a>
                     </li>
