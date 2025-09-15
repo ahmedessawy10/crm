@@ -1,26 +1,11 @@
-@font-face {
-  font-family: 'saudifont';
-  src:
-       url("../fonts/IBMPlexSansArabic-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'saudifont';
-  src: 
-       url("../fonts/HTMoshreqPro-Heavy.ttf") format("truetype");
-  font-weight: 800;
-  font-style: bold;
-}
 body {
-    font-family: 'saudifont', sans-serif;
+    font-family: 'Tajawal', sans-serif;
     box-sizing:border-box;
   margin: 0;
   padding: 0;
 }
 body.lang-en {
-  font-family: 'saudifont', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 /* \\\\\\\\\\\\\\\\\\\\\\\ */
 .navbar {
@@ -34,7 +19,7 @@ body.lang-en {
   z-index: 1000;
 }
 .navbar-nav.ms-auto .nav-item:not(:last-child) {
-  /* margin-right: 210px; المسافة بين الأزرار داخل الـ ul */
+  margin-right: 260px; /* المسافة بين الأزرار داخل الـ ul */
 }
 
 .navbar.scrolled {
@@ -46,7 +31,6 @@ body.lang-en {
 .navbar .navbar-brand img {
   height: 50px;
   border-radius: 10%;
-  background-color: #094734;
 }
 
 /* القوائم */
@@ -146,7 +130,7 @@ body.lang-en {
 }
 #hero-title{
   color: 
- #cde307;
+ #fafdf9;
   /* background-color:#F6E9D9 ; */
 border-radius: 10%;
 width: fit-content;
@@ -203,26 +187,32 @@ border-radius: 10%;
 
 /* \\\\\\\\\\\\\\\\\\\\\\\\ */
 .about-section {
-  background-color: #094734;
+  background-color: #F6E9D9; 
+  background-image: url("images/WhatsApp Image 2025-09-13 at 14.04.54_58e7588b.jpg");
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: 250px; 
   padding: 60px 0;
 }
+
+
 
 .main-title {
   font-size: 2rem;
   font-weight: bold;
-  color: #cde307 !important;
+  color: #823848;
   margin-bottom: 1rem;
 }
 
 .about-text {
   font-size: 1.1rem; /* كبرت النص شوية */
   line-height: 1.8;
-  color: white;
+  color:#823848;
 }
 
 /* الصورة */
 .about-section img {
-  border-radius: 15px;
+  border-radius: 20%;
   max-width: 100%;
   height: auto;
   display: block;
@@ -288,7 +278,7 @@ border-radius: 10%;
 .choose-us-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #2c3e50;
+  color: #823848;
   text-align: right;
   margin-bottom: 2rem;
   position: relative;
@@ -401,25 +391,32 @@ border-radius: 10%;
 /* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
 
 .flip-cards-section {
-  min-height: 100vh; /* ارتفاع الشاشة كامل */
+  position: relative;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* يبدأ من الأعلى */
+  justify-content: flex-start;
   align-items: center;
   padding: 4rem 1rem;
-  background-color: #094734; 
+
+  background: linear-gradient(rgba(226, 179, 132, 0.336), rgba(1, 73, 52, 0.9)),
+              url("images/Screenshot (174).png") center/cover no-repeat;
 }
+
 .flip-cards-section h1 {
   text-align: center;
   font-size: 2.8rem;
   font-weight: 700;
-  color: #cde307;
+  color:#5a2c3c;
   margin-bottom: 3rem; /* مسافة بين العنوان والكروت */
 }
 .flip-card {
   background-color: transparent;
   perspective: 1000px;
   margin-bottom: 1rem;
+}
+.details-btn{
+  text-decoration: none;
 }
 
 .flip-card-inner {
@@ -546,7 +543,6 @@ border-radius: 10%;
   align-items: center;
   transition: transform 0.3s ease;
 }
-
 .sponsor-icon i,
 .sponsor-icon-small i {
   font-size:9rem;
@@ -569,6 +565,13 @@ border-radius: 10%;
   flex: 1 1 30%;
   text-align: center;
 }
+.cta-logo {
+  max-width: 160px;
+  height: auto;
+  margin: 0 auto 20px; 
+  display: block;
+}
+
 
 .cta-title { font-size: 56px; font-weight: 700; margin-bottom: 15px; }
 .cta-subtitle { font-size: 24px; margin-bottom: 30px; color: #7F573C; }
@@ -761,69 +764,70 @@ border-radius: 10%;
 
 /* \\\\\\\\\\\\\\\\ */
 .footer-section {
-  background-color: #094734;
-  color: white;
-  padding: 4rem 0 2rem;
-  position: relative;
+  background: #094734;
+  color: #fff;
+  padding: 2rem 1rem;
 }
 
-.footer-section::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 1px;
-  background: rgba(255,255,255,0.1);
-}
-
-/* الأيقونات الاجتماعية */
-.social-icons {
+.footer-top {
   display: flex;
-  gap: 1rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
   margin-bottom: 2rem;
 }
 
-.social-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px; height: 40px;
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+}
+
+.social-icons {
+  margin-bottom: 1rem;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 5px;
+  width: 36px; height: 36px;
+  line-height: 36px;
+  border-radius: 6px;
   background: rgba(255,255,255,0.1);
-  border-radius: 8px;
-  color: white;
-  text-decoration: none;
-  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  text-align: center;
   transition: 0.3s;
 }
 
-.social-icon:hover {
-  background: rgba(255,255,255,0.2);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
+.social-icons a:hover { background: rgba(255,255,255,0.3); }
 
-/* نصوص الاتصال والعناوين */
-.contact-text, .contact-email {
-  font-size: 0.9rem;
-  margin: 0.2rem 0;
-  color: rgba(255,255,255,0.8);
-  font-weight: 500;
+.footer-col h5 {
+  margin-bottom: 1rem;
+  font-size: 1rem;
 }
-
-.footer-title {
-  color: white;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
-  text-align: right;
-  font-size: 1.1rem;
-}
-
-/* روابط الفوتر */
 .footer-links {
   list-style: none;
   padding: 0; margin: 0;
 }
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-.footer-links li { margin-bottom: 0.8rem; }
+.footer-col li {
+  margin: 0.5rem 0;
+}
+
+.footer-col a {
+color:rgba(255,255,255,0.8) !important;
+  text-decoration: none;
+  display: block;
+  text-align: right;
+  transition: color 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
 
 .footer-links a {
   color: rgba(255,255,255,0.8);
@@ -834,7 +838,6 @@ border-radius: 10%;
   position: relative;
   overflow: hidden;
 }
-
 .footer-links a::after {
   content: '';
   position: absolute;
@@ -847,80 +850,16 @@ border-radius: 10%;
 .footer-links a:hover {
   color: white;
 }
-
 .footer-links a:hover::after {
   width: 100%;
 }
 
-/* زر تواصل معنا */
-.btn-outline-light {
-  border: 1px solid rgba(255,255,255,0.3);
-  color: white;
-  padding: 0.5rem 1.5rem;
-  border-radius: 6px;
-  font-weight: 500;
-  transition: all 0.3s;
-}
+.footer-col a:hover { color: #fff; }
 
-.btn-outline-light:hover {
-  background: white;
-  color: #1a5f5f;
-  border-color: white;
-  transform: translateY(-1px);
-}
-
-/* الجزء السفلي من الفوتر */
 .footer-bottom {
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(255,255,255,0.1);
-}
-
-.footer-policies {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.policy-link {
-  color: rgba(255,255,255,0.7);
-  text-decoration: none;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 1rem;
+  text-align: center;
   font-size: 0.85rem;
-  transition: color 0.3s;
-  position: relative;
-  overflow: hidden;
 }
-
-.policy-link:hover {
-  color: white;
-}
-
-.policy-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0; right: 0;
-  width: 0; height: 1px;
-  background: currentColor;
-  transition: width 0.3s;
-}
-
-.policy-link:hover::after { width: 100%; }
-
-/* التصميم المتجاوب */
-@media (max-width: 991.98px) {
-  .footer-section { padding: 3rem 0 1.5rem; }
-  .social-icons { justify-content: center; margin-bottom: 1.5rem; }
-  .contact-text, .contact-email, .footer-links a, .footer-title {
-    text-align: center;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .footer-policies { flex-direction: column; gap: 1rem; text-align: center; }
-  .copyright-text { text-align: center; margin-top: 1rem; }
-  .footer-bottom { text-align: center; }
-  .social-icons { gap: 0.8rem; }
-  .social-icon { width: 36px; height: 36px; }
-}
-
 

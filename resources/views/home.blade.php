@@ -139,6 +139,8 @@
         <!-- Call to Action -->
         <div class="cta-section col-lg-4 col-md-12 text-center mt-4 mt-lg-0" data-aos="fade-left"
             data-aos-duration="1200" data-aos-delay="300">
+            <img src="{{ asset('assets/images/Generated_Image_September_13__2025_-_2_26PM-removebg-preview.png') }}"
+                class="cta-logo mb-3">
             <h2 class="cta-title">{{ __('home.cta_title') }}</h2>
             <p class="cta-subtitle">{{ __('home.cta_subtitle') }}</p>
             <button class="btn cta-button" data-bs-toggle="modal" data-bs-target="#join-us">{{ __('home.cta_button')
@@ -208,70 +210,73 @@
 
 <!-- \\\\\\\\\\\\\\\\ -->
 <!-- \\\\\\\\\\\\\\\\ -->
-<section class="contact-section position-relative overflow-hidden py-5" id="sponsors">
+<section id="sponsors" class="contact-section position-relative overflow-hidden py-5">
     <div class="container min-vh-100 d-flex align-items-center">
         <div class="row w-100 g-4">
 
-            <!-- النصوص -->
-            <div class="col-lg-8 d-flex flex-column justify-content-center text-center text-lg-center">
-                <h1 class="display-3 fw-bold mb-4" data-aos="fade-up" data-aos-duration="1000">
-                    {{ __('home.official_sponsors') }}
-                </h1>
-                {{--
-                <p class="lead mb-4 fs-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                    {{ __('home.share_ideas') }}
-                </p> --}}
+            <!-- العنوان وزر الانضمام -->
+            <div class="col-lg-12 d-flex flex-column justify-content-center">
 
-                <!-- Carousel -->
-                <div id="sponsorsCarousel" class="carousel slide my-4" style="" data-bs-ride="carousel">
+                <div class="row align-items-center sponsor-title mb-5">
+                    <!-- العنوان -->
+                    <div class="col-lg-12 text-lg-center text-center mb-3 mb-lg-0">
+                        <h1 class="display-4 fw-bold" data-aos="fade-up" data-aos-duration="1000">
+                            {{ __('home.official_sponsors') }}
+                        </h1>
+                    </div>
+
+                    <!-- زر الانضمام -->
+
+                </div>
+
+                <!-- السلايدر -->
+                <div id="sponsorsCarousel" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
 
-                        {{-- @dd($sponsors) --}}
-                        @foreach($sponsors->chunk(6) as $chunkIndex => $chunk)
-
-                        <div class="carousel-item {{ $chunkIndex == 0 ? 'active' : '' }}">
-                            <div class="d-flex justify-content-center align-items-center gap-4 flex-wrap">
+                        @forelse($sponsors->chunk(6) as $chunkIndex => $chunk)
+                        <div class="carousel-item {{ $chunkIndex === 0 ? 'active' : '' }}">
+                            <div class="d-flex justify-content-center align-items-center flex-wrap w-100">
                                 @foreach($chunk as $sponsor)
-                                <img src="{{ storage::url($sponsor['image']) }}" class="sponsor-logo"
-                                    alt="{{ $sponsor['name'] }}">
+                                <div class=" d-flex justify-content-center p-4">
+                                    <img src="{{ Storage::url($sponsor->image) }}" class="sponsor-logo img-fluid"
+                                        alt="{{ $sponsor->name }}" style="max-height: 100px; object-fit: contain;">
+                                </div>
                                 @endforeach
                             </div>
                         </div>
-                        @endforeach
+
+                        @empty
+
+                        <div class="text-center py-5">
+                            <p class="text-muted">No sponsors available</p>
+                        </div>
+                        @endforelse
 
                     </div>
 
                     <!-- Controls -->
                     <button class="carousel-control-prev" type="button" data-bs-target="#sponsorsCarousel"
                         data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
+                        <span class="carousel-control-prev-icon  rounded-circle p-2"></span>
                     </button>
                     <button class="carousel-control-next" type="button" data-bs-target="#sponsorsCarousel"
                         data-bs-slide="next">
-                        <span class="carousel-control-next-icon"></span>
+                        <span class="carousel-control-next-icon  rounded-circle p-2"></span>
                     </button>
                 </div>
 
-                <!-- زرار الانضمام -->
-                <button class="btn btn-lg px-4 py-3 fw-semibold" data-bs-toggle="modal" data-bs-target="#sponsorModal"
-                    data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            </div>
+
+            <div class="col-lg-12 text-lg-center text-center justify-content-center">
+                <button class="btn btn-primary btn-lg fw-semibold px-4 py-3 shadow-sm rounded-pill text-center"
+                    data-bs-toggle="modal" data-bs-target="#sponsorModal" data-aos="fade-up" data-aos-duration="2000"
+                    data-aos-delay="200">
                     {{ __('home.join_us') }}
                 </button>
             </div>
-
-            <!-- أيقونات يمين -->
-            <div class="col-lg-4 d-none d-lg-flex justify-content-center align-items-center">
-                <div class="lightbulb-container" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="400">
-                    <div class="sponsor-icon"><i class="fas fa-handshake"></i></div>
-                    <div class="sponsor-icon-small"><i class="fas fa-building"></i></div>
-                </div>
-            </div>
-
         </div>
     </div>
 </section>
-
-
 <!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 <div class="modal fade" id="sponsorModal" tabindex="-1" aria-labelledby="sponsorModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
