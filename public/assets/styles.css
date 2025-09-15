@@ -189,9 +189,9 @@ border-radius: 10%;
 .about-section {
   background-color: #F6E9D9; 
   background-image: url("images/WhatsApp Image 2025-09-13 at 14.04.54_58e7588b.jpg");
-  background-position: top left;
+  background-position: top end;
   background-repeat: no-repeat;
-  background-size: 250px; 
+  background-size: 120px; 
   padding: 60px 0;
 }
 
