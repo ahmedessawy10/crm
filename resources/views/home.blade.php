@@ -280,7 +280,7 @@
     <div class="col-lg-12 d-flex flex-column justify-content-center px-4">
         <div class="row align-items-center sponsor-title mb-5">
             <div class="col-lg-12 text-center">
-                <h1 class="display-4 fw-bold" data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="display-4 fw-bold main-title" data-aos="fade-up" data-aos-duration="1000">
                     {{ __('home.news') }}
                 </h1>
             </div>
@@ -328,7 +328,7 @@
     <div class="col-lg-12 d-flex flex-column justify-content-center">
         <div class="row align-items-center sponsor-title mb-5">
             <div class="col-lg-12 text-center">
-                <h1 class="display-4 fw-bold" data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="display-4 fw-bold main-title" data-aos="fade-up" data-aos-duration="1000">
                     {{ __('home.reports') }}
                 </h1>
             </div>
