@@ -587,3 +587,8 @@ color: rgba(255,255,255,0.8) !importmant;
 @media(max-width: 767.98px){
   .news-image-wrapper{ height: 180px; }
 }
+
+
+.footer-links{
+  list-style-type:none;
+}
