@@ -2,8 +2,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\HeroSection;
+use App\Models\News;
 use App\Models\PageVisit;
 use App\Models\Program;
+use App\Models\Report;
 use App\Models\Sponsor;
 use App\Models\Statistics;
 use App\Models\WhyUs;
@@ -17,6 +19,8 @@ class MainController extends Controller
         $whyus      = WhyUs::all();
         $statistics = Statistics::all();
         $sponsors   = Sponsor::where("is_active", true)->get();
+        $news       = News::all();
+        $reports    = Report::all();
 
         if (! session()->has('visited_home')) {
             $home = PageVisit::firstOrCreate(
@@ -28,7 +32,7 @@ class MainController extends Controller
             session()->put('visited_home', true);
         }
 
-        return view("home", compact('hero', "whyus", 'statistics', "sponsors"));
+        return view("home", compact('hero', "whyus", 'statistics', "sponsors", "news", 'reports'));
     }
 
     public function getProgram($id)

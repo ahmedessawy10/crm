@@ -7,7 +7,7 @@ use Spatie\Translatable\HasTranslations;
 class Program extends Model
 {
     use HasTranslations;
-    protected $fillable  = ["image", 'name', "description"];
+    protected $fillable  = ["image", 'name', "description", "background_image"];
     public $translatable = ['name', "description"];
 
     public function goals()

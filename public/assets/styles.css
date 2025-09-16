@@ -443,7 +443,8 @@ border-radius: 10%;
 }
 
 .flip-card-front {
-  background: #823848;
+  /* background: #823848; */
+  background: #99651aa1;
   color: white;
   display: flex;
   flex-direction: column;
@@ -459,7 +460,8 @@ border-radius: 10%;
 }
 
 .flip-card-back {
-  background: #5a2c3c;
+  /* background: #5a2c3c; */
+  background: #99651aa1;
   color: white;
   transform: rotateY(180deg);
   display: flex;
@@ -863,3 +865,116 @@ color:rgba(255,255,255,0.8) !important;
   font-size: 0.85rem;
 }
 
+
+/* ===== News Section ===== */
+.news-section {
+  background-color: #F6E9D9;
+  padding: 60px 0;
+}
+.news-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.news-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+.news-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+.news-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.news-card:hover .news-image { transform: scale(1.06); }
+.news-date-chip {
+  position: absolute;
+  top: 12px; left: 12px;
+  background: #094734;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+}
+.news-title { color: #823848; font-weight: 700; }
+.news-excerpt { color: #7F573C; }
+.news-btn {
+  background: #823848;
+  color: #fff;
+  border-radius: 10px;
+}
+.news-btn:hover { background: #5a2c3c; color: #fff; }
+
+/* ===== Reports Section ===== */
+.reports-section {
+  background-color: #fff;
+  padding: 60px 0;
+}
+.report-card {
+  background: #F6E9D9;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.report-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+}
+.report-icon {
+  width: 52px; height: 52px;
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  background: #823848;
+  color: #fff;
+  flex-shrink: 0;
+}
+.report-title { color: #094734; font-weight: 700; }
+.report-desc { color: #7F573C;min-height: 35px; }
+.report-download {
+  background: #094734;
+  color: #fff;
+  border-radius: 10px;
+}
+.report-download:hover { background: #0c5e40; color: #fff; }
+
+@media(max-width: 767.98px){
+  .news-image-wrapper{ height: 180px; }
+}
+
+
+/* اجبر السلايد ياخد العرض كله */
+.swiper {
+    width: 100%;
+}
+
+.swiper-wrapper {
+    display: flex;
+}
+
+.swiper-slide {
+    width: auto; /* أو 100% حسب التصميم */
+    flex: 0 0 auto; 
+}
+
+/* لو عايز كل كارد يملأ العرض اللي مخصص له */
+.news-card, .report-card {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-button-prev ,.swiper-button-next{
+  color:#823848;
+}
+
+.swiper-pagination-bullet-active{
+   background-color:#823848 !important;
+}

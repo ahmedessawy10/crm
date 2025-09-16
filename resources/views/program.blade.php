@@ -7,10 +7,10 @@
 @section("content")
 
 {{-- Hero Section --}}
-<section class="hero-section d-flex align-items-center">
+<section class="hero-section d-flex align-items-center" style="background: linear-gradient(rgba(9,71,52,0.6), rgba(9,71,52,0.6)), 
+           url('{{ asset('storage/' . $program->background_image) }}') center / cover no-repeat;">
     <div class="container">
         <div class="row align-items-center">
-
             <div class="col-lg-6 text-center text-lg-start mb-4 mb-lg-0" data-aos="fade-left" data-aos-duration="1200"
                 data-aos-easing="ease-in-out">
                 <img src="{{ Storage::url($program->image) }}" alt="{{ $program->name }}" class="img-fluid hero-img">

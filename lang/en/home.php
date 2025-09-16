@@ -73,5 +73,10 @@ return [
     'share_ideas'            => 'Do you have an idea or a creative way to learn and grow? Don’t hesitate. Share your ideas with us.',
 
     "join_us"                => "JOIN US",
+    'download'               => 'Download',
+    'news'                   => 'News',
+    'reports'                => 'Reports',
+    'read_more'              => 'Read More',
+    "close"                  => "Close",
 
 ];

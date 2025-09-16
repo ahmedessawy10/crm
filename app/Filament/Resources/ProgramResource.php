@@ -43,6 +43,9 @@ class ProgramResource extends Resource
                 FileUpload::make('image')
                     ->image()
                     ->required()->columnSpan(2),
+                FileUpload::make('background_image')
+                    ->image()
+                    ->required()->columnSpan(2),
 
             ]);
 
