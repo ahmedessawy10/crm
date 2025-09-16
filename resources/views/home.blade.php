@@ -83,7 +83,7 @@
 <section class="flip-cards-section" id="programs">
     <div class="container">
         <h1 class="cards-title" data-aos="fade-up" data-aos-duration="1000">
-            {{ __('home.cards_title') }}
+            {{ __('site.tour',['name'=>$setting->app_name]) }}
         </h1>
         <div class="row g-4">
 
