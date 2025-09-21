@@ -347,7 +347,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary"
-                                    data-bs-dismiss="modal">{{ __('home.close') }}</button>
+                                    data-bs-dismiss="modal" style="margin:0">{{ __('home.close') }}</button>
                             </div>
                         </div>
                     </div>
