@@ -444,7 +444,7 @@ border-radius: 10%;
 
 .flip-card-front {
   /* background: #823848; */
-  background: #99651aa1;
+  background: #e7a74a40;
   color: white;
   display: flex;
   flex-direction: column;
@@ -461,7 +461,7 @@ border-radius: 10%;
 
 .flip-card-back {
   /* background: #5a2c3c; */
-  background: #99651aa1;
+  background: #f4cb8fa3;
   color: white;
   transform: rotateY(180deg);
   display: flex;
