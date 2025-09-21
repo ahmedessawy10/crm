@@ -51,7 +51,7 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    background: #fff;
+    background: transparent;
     z-index: 9999;
     display: flex;
     justify-content: center;
