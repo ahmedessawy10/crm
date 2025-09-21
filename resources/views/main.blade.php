@@ -117,6 +117,7 @@
                    <li class="nav-item" data-aos="zoom-in">
   <button class="nav-link btn btn-link" 
           id="btn-start"
+          style="padding:5px"
           data-bs-toggle="modal" 
           data-bs-target="#join-us">
       {{ __('home.btn_start') }}
