@@ -349,7 +349,7 @@ $colors = ['#ab7a59', '#094734de', '#7a3242', '#014934', '#f39c12', '#16a085'];
                 <button class="btn btn-primary btn-lg fw-semibold px-4 py-3 shadow-sm rounded-pill text-center"
                     data-bs-toggle="modal" data-bs-target="#sponsorModal" data-aos="fade-up" data-aos-duration="2000"
                     data-aos-delay="200">
-                    {{ __('home.join_us') }}
+                   {{ __('site.sponsorship_request') }}
                 </button>
             </div>
         </div>

@@ -33,4 +33,5 @@ return [
     "why2"              => "لماذا :name",
     "programs2"         => "برامج :name",
     "sponsors"          => "رعاتنا",
+    'sponsorship_request' => 'طلب رعاية',
 ];

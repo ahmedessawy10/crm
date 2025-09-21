@@ -31,5 +31,5 @@ return [
     "why"               => "Why",
     "why2"              => "Why :name",
     "programs2"         => "Programs :name",
-    "sponsors"          => "Sponsors",
+      'sponsorship_request' => 'Sponsorship Request',
 ];
