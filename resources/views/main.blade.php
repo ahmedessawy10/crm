@@ -212,7 +212,7 @@
     setTimeout(() => {
         const loader = document.getElementById("loader");
         loader.classList.add("hidden"); // يخليه يتلاشى
-        setTimeout(() => loader.style.display = "none", 500); // يشيله خالص بعد الأنيميشن
+        setTimeout(() => loader.style.display = "none", 1000); // يشيله خالص بعد الأنيميشن
     }, 400);
 });
         document.getElementById('brandForm').addEventListener('submit', function(e) {
