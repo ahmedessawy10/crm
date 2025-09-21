@@ -313,7 +313,26 @@
                 </div>
 
                 <!-- Modal -->
-                <div class="modal fade" id="newsModal{{ $item->id }}" tabindex="-1" aria-hidden="true">
+               
+                
+                @empty
+                <div class="swiper-slide text-center">No News Available</div>
+                @endforelse
+            </div>
+
+            <!-- Swiper Controls -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+        @endisset
+    </div>
+</section>
+
+
+
+@foreach ( $news as $item)
+     <div class="modal fade" id="newsModal{{ $item->id }}" tabindex="-1" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-lg">
                         <div class="modal-content rounded-4 shadow">
                             <div class="modal-header">
@@ -333,19 +352,7 @@
                         </div>
                     </div>
                 </div>
-                @empty
-                <div class="swiper-slide text-center">No News Available</div>
-                @endforelse
-            </div>
-
-            <!-- Swiper Controls -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
-        </div>
-        @endisset
-    </div>
-</section>
+@endforeach
 
 <!-- ================= Reports Section ================= -->
 <section class="reports-section container" id="reports">
