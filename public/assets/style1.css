@@ -23,8 +23,9 @@ body.lang-en {
   font-family:  sans-serif;
 }
 /* \\\\\\\\\\\\\\\\\\\\\\\ */
-
-
+h1, h2, h3,a,li .cards-title {
+  letter-spacing: 2px;
+}
 .navbar {
   position: fixed;
   top: 0;

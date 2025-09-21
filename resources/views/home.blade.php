@@ -16,8 +16,8 @@
 
         <!-- الأزرار -->
         <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1400">
-            <a href="{{ route('home') }}#programs" id="btn-start" class="btn btn-success btn-lg me-2">{{
-                __('home.btn_start') }}</a>
+                 <button  class="btn btn-success btn-lg me-2"  id="btn-start" data-bs-toggle="modal" data-bs-target="#join-us">{{
+                __('home.btn_start') }}</button>
             {{-- <a href="#" id="btn-about" class="btn btn-outline-light btn-lg">{{ __('home.btn_about') }}</a> --}}
         </div>
     </div>
@@ -290,63 +290,7 @@ $colors = ['#ab7a59', '#094734de', '#7a3242', '#014934', '#f39c12', '#16a085'];
 
 
 
-<div class="modal fade" id="join-us" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content rounded-4 shadow">
-            <div class="modal-header">
-                <h5 class="modal-title">{{ __('home.modal_title') }}</h5>
-            </div>
-            <div class="modal-body">
-                <form id="brandForm" action="{{ route('request.join.store') }}">
-                    <!-- اسم العلامة التجارية -->
-                    <div class="mb-3">
-                        <label class="form-label">
-                            {{ __('home.brand_name') }} <span class="text-danger">*</span>
-                        </label>
-                        <input type="text" class="form-control" required name="brand_name">
-                    </div>
 
-                    <!-- رقم الهاتف -->
-                    <div class="mb-3">
-                        <label class="form-label">
-                            {{ __('home.phone') }} <span class="text-danger">*</span>
-                        </label>
-                        <input type="tel" class="form-control" required pattern="[0-9]{8,15}"
-                            placeholder="{{ __('home.phone_placeholder') }}" name="phone">
-                    </div>
-
-                    <!-- البريد الإلكتروني -->
-                    <div class="mb-3">
-                        <label class="form-label">
-                            {{ __('home.email') }} <span class="text-danger">*</span>
-                        </label>
-                        <input type="email" class="form-control" required name="email">
-                    </div>
-
-                    <!-- رابط الموقع -->
-                    <div class="mb-3">
-                        <label class="form-label">{{ __('home.website') }}</label>
-                        <input type="url" class="form-control" placeholder="{{ __('home.website_placeholder') }}"
-                            name="website_url">
-                    </div>
-
-                    <!-- ملاحظات -->
-                    <div class="mb-3">
-                        <label class="form-label">{{ __('home.notes') }}</label>
-                        <textarea class="form-control" rows="3" name="note"></textarea>
-                    </div>
-
-                    <!-- زرار إرسال -->
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ __('home.cancel')
-                            }}</button>
-                        <button type="submit" class="btn btn-primary">{{ __('home.send') }}</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
 
 <!-- \\\\\\\\\\\\\\\\ -->
 <!-- \\\\\\\\\\\\\\\\ -->

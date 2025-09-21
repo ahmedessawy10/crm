@@ -114,6 +114,15 @@
                     <li class="nav-item" data-aos="zoom-in"><a class="nav-link" href="{{ route('home') }}#sponsors">{{
                             __('site.sponsors') }}</a>
                     </li>
+                   <li class="nav-item" data-aos="zoom-in">
+  <button class="nav-link btn btn-link" 
+          id="btn-start"
+          data-bs-toggle="modal" 
+          data-bs-target="#join-us">
+      {{ __('home.btn_start') }}
+  </button>
+</li>
+                    </li>
                 </ul>
 
                 <ul class="navbar-nav ms-auto align-items-center">
@@ -137,6 +146,66 @@
 
     <!-- Main Content -->
     @yield("content")
+
+
+
+    <div class="modal fade" id="join-us" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-4 shadow">
+            <div class="modal-header">
+                <h5 class="modal-title">{{ __('home.modal_title') }}</h5>
+            </div>
+            <div class="modal-body">
+                <form id="brandForm" action="{{ route('request.join.store') }}">
+                    <!-- اسم العلامة التجارية -->
+                    <div class="mb-3">
+                        <label class="form-label">
+                            {{ __('home.brand_name') }} <span class="text-danger">*</span>
+                        </label>
+                        <input type="text" class="form-control" required name="brand_name">
+                    </div>
+
+                    <!-- رقم الهاتف -->
+                    <div class="mb-3">
+                        <label class="form-label">
+                            {{ __('home.phone') }} <span class="text-danger">*</span>
+                        </label>
+                        <input type="tel" class="form-control" required pattern="[0-9]{8,15}"
+                            placeholder="{{ __('home.phone_placeholder') }}" name="phone">
+                    </div>
+
+                    <!-- البريد الإلكتروني -->
+                    <div class="mb-3">
+                        <label class="form-label">
+                            {{ __('home.email') }} <span class="text-danger">*</span>
+                        </label>
+                        <input type="email" class="form-control" required name="email">
+                    </div>
+
+                    <!-- رابط الموقع -->
+                    <div class="mb-3">
+                        <label class="form-label">{{ __('home.website') }}</label>
+                        <input type="url" class="form-control" placeholder="{{ __('home.website_placeholder') }}"
+                            name="website_url">
+                    </div>
+
+                    <!-- ملاحظات -->
+                    <div class="mb-3">
+                        <label class="form-label">{{ __('home.notes') }}</label>
+                        <textarea class="form-control" rows="3" name="note"></textarea>
+                    </div>
+
+                    <!-- زرار إرسال -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ __('home.cancel')
+                            }}</button>
+                        <button type="submit" class="btn btn-primary">{{ __('home.send') }}</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
     <!-- ====== Footer ====== -->
     <footer class="footer-section">
