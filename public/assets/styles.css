@@ -1,5 +1,20 @@
+@font-face {
+  font-family: 'suadiFont';
+  src: url('../Web fonts/WOFF-2-TT/Saudi Web/SaudiWeb-Regular.woff2') format('woff2'),
+  url('../Web fonts/WOFF-TT/Saudi Web/SaudiWeb-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'suadiFont';
+  src: url('../Web fonts/WOFF-2-TT/Saudi Web/SaudiWeb-Bold.woff2') format('woff2'),
+       url('../Web fonts/WOFF-TT/Saudi Web/SaudiWeb-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
 body {
-    font-family: 'Tajawal', sans-serif;
+    font-family: 'suadiFont', sans-serif;
     box-sizing:border-box;
   margin: 0;
   padding: 0;
