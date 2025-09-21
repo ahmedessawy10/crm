@@ -59,8 +59,6 @@
             <div class="choose-us-text">
                 <h2 class="choose-us-title">{{ __('home.choose_us_title') }}</h2>
                 <div class="choose-us-features">
-
-
                     @foreach($whyus as $ws)
                     <div class="choose-us-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                         <div class="choose-us-icon"><i class="{{ $ws->icon }}"></i></div>
@@ -70,13 +68,9 @@
                             </div>
                         </div>
                     </div>
-
                     @endforeach
-
                 </div>
             </div>
-
-          
         </div>
     </div>
 </section>
