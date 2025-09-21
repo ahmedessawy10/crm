@@ -93,7 +93,7 @@
             <!-- كارت 1 -->
 
             @php
-$colors = ['#ab7a59', '#094734de', '#ab7a59', '#014934', '#f39c12', '#16a085'];
+$colors = ['#ab7a59', '#094734de', '#7a3242', '#014934', '#f39c12', '#16a085'];
 @endphp
             @foreach ($programs as $i=>$p )
             <div class="col-md-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
