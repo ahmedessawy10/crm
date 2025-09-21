@@ -107,6 +107,10 @@
                     </li> --}}
 
 
+                    <li class="nav-item" data-aos="zoom-in"><a class="nav-link" href="{{ route('home') }}#reports">{{ __("home.reports") }}</a>
+                    </li>
+                    <li class="nav-item" data-aos="zoom-in"><a class="nav-link" href="{{ route('home') }}#news">{{ __("home.news") }}</a>
+                    </li>
                     <li class="nav-item" data-aos="zoom-in"><a class="nav-link" href="{{ route('home') }}#sponsors">{{
                             __('site.sponsors') }}</a>
                     </li>

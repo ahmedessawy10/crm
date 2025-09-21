@@ -78,5 +78,10 @@ return [
     'reports'                => 'Reports',
     'read_more'              => 'Read More',
     "close"                  => "Close",
+    "reports"                  => "Reports",
+    "news"                  => "News",
+        "no_reports"   => "No Reports Available",
+    "no_news"      => "No News Available",
+    "no_sponsors"  => "No Sponsors Available",
 
 ];

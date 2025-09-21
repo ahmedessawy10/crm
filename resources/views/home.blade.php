@@ -316,7 +316,7 @@
                
                 
                 @empty
-                <div class="swiper-slide text-center">No News Available</div>
+                <div class="swiper-slide text-center">{{ __("home.no_news") }}</div>
                 @endforelse
             </div>
 
@@ -388,7 +388,7 @@
                     </div>
                 </div>
                 @empty
-                <div class="swiper-slide text-center">No Reports Available</div>
+                <div class="swiper-slide text-center">{{ __("home.no_reports") }}</div>
                 @endforelse
             </div>
 
@@ -508,7 +508,7 @@
                         @empty
 
                         <div class="text-center py-5">
-                            <p class="text-muted">No sponsors available</p>
+                            <p class="text-muted">{{ __("home.no_sponsors") }}</p>
                         </div>
                         @endforelse
 
