@@ -51,6 +51,11 @@
     <div class="choose-us-container">
         <div class="choose-us-content-wrapper">
             <!-- Content -->
+
+              <!-- Image -->
+            <div class="choose-us-image">
+                <img src="{{Storage::url($setting->why_us_image)}}" class="choose-us-main-image">
+            </div>
             <div class="choose-us-text">
                 <h2 class="choose-us-title">{{ __('home.choose_us_title') }}</h2>
                 <div class="choose-us-features">
@@ -71,10 +76,7 @@
                 </div>
             </div>
 
-            <!-- Image -->
-            <div class="choose-us-image">
-                <img src="{{Storage::url($setting->why_us_image)}}" class="choose-us-main-image">
-            </div>
+          
         </div>
     </div>
 </section>
