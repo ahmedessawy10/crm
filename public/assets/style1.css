@@ -24,7 +24,7 @@ body.lang-en {
 }
 /* \\\\\\\\\\\\\\\\\\\\\\\ */
 h1, h2, h3,a,li .cards-title {
-  letter-spacing: 2px;
+   word-spacing: 5px;
 }
 .navbar {
   position: fixed;
