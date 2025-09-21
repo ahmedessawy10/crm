@@ -23,7 +23,7 @@ body.lang-en {
   font-family:  sans-serif;
 }
 /* \\\\\\\\\\\\\\\\\\\\\\\ */
-h1, h2, h3,a,li .cards-title {
+h1, h2, h3,a,li,p, .cards-title {
    word-spacing: 5px;
 }
 .navbar {
