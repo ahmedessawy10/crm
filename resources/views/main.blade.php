@@ -46,6 +46,18 @@
 {{-- {{ dd($setting) }} --}}
 
 <body class="">
+
+    <div id="loader" style="
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;">
+    <img src="{{ asset('assets/spinner.gif') }}" alt="Loading...">
+</div>
     <!-- ====== Navbar ====== -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
@@ -195,6 +207,12 @@
     @stack('scripts')
 
     <script>
+
+      
+    window.addEventListener("load", function () {
+        document.getElementById("loader").style.display = "none";
+    });
+
         document.getElementById('brandForm').addEventListener('submit', function(e) {
             e.preventDefault();
         
