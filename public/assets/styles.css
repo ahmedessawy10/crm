@@ -16,6 +16,7 @@
 
 h1, h2, h3,a,li, p,.cards-title {
   word-spacing: 2px;
+   letter-spacing: 0.30em !important;
 }
 
 body {
