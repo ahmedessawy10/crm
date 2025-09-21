@@ -45,7 +45,7 @@ class ProgramResource extends Resource
                     ->required()->columnSpan(2),
                 FileUpload::make('background_image')
                     ->image()
-                    ->nullable()->columnSpan(2),
+                    ->required()->columnSpan(2),
 
             ]);
 
