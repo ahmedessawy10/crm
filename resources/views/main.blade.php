@@ -111,9 +111,11 @@
                     </li>
                     <li class="nav-item" data-aos="zoom-in"><a class="nav-link" href="{{ route('home') }}#news">{{ __("home.news") }}</a>
                     </li>
-                    <li class="nav-item" data-aos="zoom-in"><a class="nav-link" href="{{ route('home') }}#sponsors">{{
-                            __('site.sponsors') }}</a>
+                    <li class="nav-item" data-aos="zoom-in"><a class="nav-link" href="{{ route('home') }}#sponsors"> {{ __('site.sponsorship_request') }}</a>
                     </li>
+                    {{-- <li class="nav-item" data-aos="zoom-in"><a class="nav-link" href="{{ route('home') }}#sponsors">{{
+                            __('site.sponsors') }}</a>
+                    </li> --}}
                    <li class="nav-item" data-aos="zoom-in">
   <button class="nav-link btn btn-link" 
           id="btn-start"
