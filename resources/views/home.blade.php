@@ -312,24 +312,27 @@
                     </div>
                 </div>
 
-             <div class="modal fade" id="newsModal{{ $item->id }}" tabindex="-1" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-lg">
-                    <div class="modal-content rounded-4 shadow">
-                        <div class="modal-header">
-                            <h5 class="modal-title">{{ $item->title ?? '' }}</h5>
-                        </div>
-                        <div class="modal-body">
-                            <img src="{{ isset($item->image) ? Storage::url($item->image) : asset('assets/images/placeholder.png') }}"
-                                class="img-fluid rounded mb-3" alt="news">
-                            <div class="news-modal-content">{!! $item->content ?? '' !!}</div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ __('home.close')
-                                }}</button>
+                <!-- Modal -->
+                <div class="modal fade" id="newsModal{{ $item->id }}" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content rounded-4 shadow">
+                            <div class="modal-header">
+                                <h5 class="modal-title">{{ $item->title ?? '' }}</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="{{ isset($item->image) ? Storage::url($item->image) : asset('assets/images/placeholder.png') }}"
+                                    class="img-fluid rounded mb-3" alt="news">
+                                <div class="news-modal-content">{!! $item->content ?? '' !!}</div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary"
+                                    data-bs-dismiss="modal">{{ __('home.close') }}</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
                 @empty
                 <div class="swiper-slide text-center">No News Available</div>
                 @endforelse
