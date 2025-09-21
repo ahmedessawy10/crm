@@ -335,8 +335,8 @@
      <div class="modal fade" id="newsModal{{ $item->id }}" tabindex="-1" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-lg">
                         <div class="modal-content rounded-4 shadow">
-                            <div class="modal-header">
-                                <h5 class="modal-title"style="justify-content: space-between;">{{ $item->title ?? '' }}</h5>
+                            <div class="modal-header"style="justify-content: space-between;">
+                                <h5 class="modal-title">{{ $item->title ?? '' }}</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
