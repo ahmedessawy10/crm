@@ -51,7 +51,8 @@
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}" id="nav-brand">
                 <img src="{{Storage::url($setting->logo) }}"
-                    style="height:70px; background-color:#f6e9d9; border-radius:10%;">
+                    style="height:70px; 
+                     border-radius:10%;">
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
