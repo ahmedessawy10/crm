@@ -81,6 +81,7 @@
     </div>
 </section>
 
+
 <!-- سكشن الكروت -->
 <section class="flip-cards-section" id="programs">
     <div class="container">
@@ -91,17 +92,20 @@
 
             <!-- كارت 1 -->
 
-            @foreach ($programs as $p )
+            @php
+$colors = ['#823848', '#e7a74a', '#5a2c3c', '#014934', '#f39c12', '#16a085'];
+@endphp
+            @foreach ($programs as $i=>$p )
             <div class="col-md-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
                 <div class="flip-card">
                     <div class="flip-card-inner">
                         <!-- الوجه الأمامي -->
-                        <div class="flip-card-front">
+                        <div class="flip-card-front" style="background: {{ $colors[$i % count($colors)] }};">
                             <img src="{{Storage::url($p->image)}}" class="card-img-top">
                             {{-- <div class="card-header text-center fw-bold">{{ $p->name }}</div> --}}
                         </div>
                         <!-- الوجه الخلفي -->
-                        <div class="flip-card-back">
+                        <div class="flip-card-back" style="background: {{ $colors[$i % count($colors)] }};">
                             <a href="{{ route('getprogram',$p->id)}}" class="details-btn">{{ __('home.details_btn')
                                 }}</a>
                         </div>
@@ -151,130 +155,6 @@
 
     </div>
 </section>
-<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
-
-{{-- <section class="news-section fluid-container" id="news">
-    <div class="col-lg-12 d-flex flex-column justify-content-center px-4">
-        <div class="row align-items-center sponsor-title mb-5">
-            <div class="col-lg-12 text-lg-center text-center mb-3 mb-lg-0">
-                <h1 class="display-4 fw-bold" data-aos="fade-up" data-aos-duration="1000">
-                    {{ __('home.news') }}
-                </h1>
-            </div>
-        </div>
-
-        @isset($news)
-        <div class="row g-4">
-            @forelse($news as $item)
-            <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="100">
-                <div class="news-card h-100">
-                    <div class="news-image-wrapper">
-                        <img src="{{ isset($item->image) ? Storage::url($item->image) : asset('assets/images/placeholder.png') }}"
-                            alt="news" class="news-image">
-                        <span class="news-date-chip">{{ isset($item->created_at) ? $item->created_at->format('d M Y') :
-                            '' }}</span>
-                    </div>
-                    <div class="news-content p-3">
-                        <h5 class="news-title mb-2">{{ $item->title ?? '' }}</h5>
-                        <p class="news-excerpt mb-3">{!! \Illuminate\Support\Str::limit(strip_tags($item->content ??
-                            ''), 120) !!}</p>
-                        <button class="btn news-btn" data-bs-toggle="modal"
-                            data-bs-target="#newsModal{{ $item->id }}">{{ __('home.read_more') }}</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="modal fade" id="newsModal{{ $item->id }}" tabindex="-1" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-lg">
-                    <div class="modal-content rounded-4 shadow">
-                        <div class="modal-header">
-                            <h5 class="modal-title">{{ $item->title ?? '' }}</h5>
-                        </div>
-                        <div class="modal-body">
-                            <img src="{{ isset($item->image) ? Storage::url($item->image) : asset('assets/images/placeholder.png') }}"
-                                class="img-fluid rounded mb-3" alt="news">
-                            <div class="news-modal-content">{!! $item->content ?? '' !!}</div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ __('home.close')
-                                }}</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            @empty
-
-            @endforelse
-        </div>
-        @endisset
-    </div>
-</section>
-<section class="reports-section container" id="reports">
-    <div class="col-lg-12 d-flex flex-column justify-content-center">
-        <div class="row align-items-center sponsor-title mb-5">
-            <div class="col-lg-12 text-lg-center text-center mb-3 mb-lg-0">
-                <h1 class="display-4 fw-bold" data-aos="fade-up" data-aos-duration="1000">
-                    {{ __('home.reports') }}
-                </h1>
-            </div>
-        </div>
-
-        @isset($reports)
-        <div class="row g-4">
-            @forelse($reports as $report)
-            <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                <div class="report-card d-flex align-items-start gap-3">
-                    <div class="report-icon">
-                        <i class="fas fa-file-alt"></i>
-                    </div>
-                    <div class="flex-fill">
-                        <h5 class="report-title mb-1">{{ $report->title ?? '' }}</h5>
-                        <p class="report-desc mb-2">{!! \Illuminate\Support\Str::limit(strip_tags($report->description
-                            ?? ''), 160) !!}</p>
-                        @if(isset($report->file))
-                        <a class="btn report-download" href="{{ Storage::url($report->file) }}" download>
-                            {{ __('home.download') }}
-                        </a>
-                        @endif
-                    </div>
-                </div>
-            </div>
-            @empty
-            <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                <div class="report-card d-flex align-items-start gap-3">
-                    <div class="report-icon">
-                        <i class="fas fa-file-alt"></i>
-                    </div>
-                    <div class="flex-fill">
-                        <h5 class="report-title mb-1">تقرير سنوي تجريبي 2024</h5>
-                        <p class="report-desc mb-2">وصف مختصر لتقرير سنوي تجريبي يوضح شكل العنصر وطريقة التحميل.</p>
-                        <a class="btn report-download"
-                            href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" download>
-                            {{ __('home.download') }}
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
-                <div class="report-card d-flex align-items-start gap-3">
-                    <div class="report-icon">
-                        <i class="bi bi-file-earmark-text"></i>
-                    </div>
-                    <div class="flex-fill">
-                        <h5 class="report-title mb-1">ملخص أداء ربع سنوي</h5>
-                        <p class="report-desc mb-2">نص تجريبي لملخص أداء ربع سنوي مع زر تحميل ملف PDF.</p>
-                        <a class="btn report-download"
-                            href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" download>
-                            {{ __('home.download') }}
-                        </a>
-                    </div>
-                </div>
-            </div>
-            @endforelse
-        </div>
-        @endisset
-    </div>
-</section> --}}
 
 
 <!-- ================= News Section ================= -->
