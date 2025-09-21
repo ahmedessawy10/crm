@@ -51,7 +51,7 @@
     position: fixed;
     width: 100%;
     height: 100%;
-  background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.8);
     z-index: 9999;
     display: flex;
     justify-content: center;
@@ -210,7 +210,10 @@
 
       
     window.addEventListener("load", function () {
-        document.getElementById("loader").style.display = "none";
+        setTimeout(() => {
+            document.getElementById("loader").style.display = "none";
+            
+        },400);
     });
 
         document.getElementById('brandForm').addEventListener('submit', function(e) {
