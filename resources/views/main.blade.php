@@ -51,7 +51,7 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    background: transparent;
+  background: rgba(255, 255, 255, 0.8);
     z-index: 9999;
     display: flex;
     justify-content: center;
