@@ -1,16 +1,18 @@
 <?php
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\SettingResource\Pages;
-use App\Models\Setting;
 use Filament\Forms;
-use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\Section;
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
 use Filament\Tables;
+use App\Models\Setting;
+use Filament\Forms\Form;
 use Filament\Tables\Table;
+use Filament\Resources\Resource;
+use Filament\Forms\Components\Section;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
+use Filament\Tables\Columns\ImageColumn;
+use Filament\Forms\Components\FileUpload;
+use App\Filament\Resources\SettingResource\Pages;
 use Mvenghaus\FilamentPluginTranslatableInline\Forms\Components\TranslatableContainer;
 
 class SettingResource extends Resource
@@ -30,6 +32,15 @@ class SettingResource extends Resource
                         TextInput::make('app_name')
                             ->required()
                             ->maxLength(255)
+                    ),
+
+                    TranslatableContainer::make(
+                        Textarea::make('about_us')
+                            ->required()
+                    ),
+                    TranslatableContainer::make(
+                        TextInput::make('address')
+                            ->required()
                     ),
 
                     Forms\Components\TextInput::make('default_language')
@@ -57,11 +68,11 @@ class SettingResource extends Resource
                     //     Textarea::make('about_us')
                     //         ->required()
                     // ),
-                    Forms\Components\FileUpload::make('about_us_image')
+                    FileUpload::make('about_us_image')
                         ->image(),
                 ]),
                 Section::make("Why us")->schema([
-                    Forms\Components\FileUpload::make('why_us_image')
+                    FileUpload::make('why_us_image')
                         ->image(),
                 ]),
 
@@ -83,19 +94,19 @@ class SettingResource extends Resource
     {
         return $table
             ->columns([
-                // FileUpload::make('logo'),
+                ImageColumn::make('logo'),
                 Tables\Columns\TextColumn::make('default_language')
                     ->searchable(),
-                // Tables\Columns\TextColumn::make('facebook_url')
-                //     ->searchable(),
-                // Tables\Columns\TextColumn::make('twitter_url')
-                //     ->searchable(),
-                // Tables\Columns\TextColumn::make('youtube_url')
-                //     ->searchable(),
-                // Tables\Columns\TextColumn::make('instagram_url')
-                //     ->searchable(),
-                // Tables\Columns\TextColumn::make('snapchat_url')
-                //     ->searchable(),
+                Tables\Columns\TextColumn::make('facebook_url')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('twitter_url')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('youtube_url')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('instagram_url')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('snapchat_url')
+                    ->searchable(),
                 Tables\Columns\ImageColumn::make('about_us_image'),
                 Tables\Columns\TextColumn::make('phone')
                     ->searchable(),
